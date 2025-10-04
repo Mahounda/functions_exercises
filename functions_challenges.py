@@ -11,7 +11,8 @@ def get_float(prompt_string: str):
     Returns:
         - A float converted from the user's input
     """
-    pass
+    return float (input(prompt_string))
+
 
 
 #############################################################################################################
@@ -27,7 +28,8 @@ def miles_to_km(distance_in_miles: float):
     Returns
         - a float representing the distance in kilometers
     """
-    pass
+    return distance_in_miles * 1.60934
+
 
 
 #############################################################################################################
@@ -45,7 +47,7 @@ def relay_distance(distance_per_runner: float, number_of_runners: float):
     Returns:
         - A float representing the total distance run.
     """
-    pass
+    return distance_per_runner * number_of_runners
 
 
 #############################################################################################################
@@ -63,4 +65,7 @@ def relay_distance_input():
     Returns:
         - A float representing the total distance run.
     """
-    pass
+    runners =  get_float ("Enter number of runners:")
+    distance_miles = get_float ("Enter the distanceeach runner has run (in miles)")
+    distance_kms = miles_to_km (distance_miles)
+    return relay_distance (distance_kms, runners)
